@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.GridPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="439.0" prefWidth="340.0" style="-fx-background-position: center center; -fx-background-repeat: stretch;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.DangNhapController">
+   <children>
+      <TextField fx:id="txtTaiKhoan" layoutX="58.0" layoutY="187.0" onAction="#DangNhap" prefHeight="35.0" prefWidth="224.0" promptText="Tài khoản" />
+      <Label fx:id="lblStatus" layoutX="18.0" layoutY="408.0" textFill="RED" AnchorPane.leftAnchor="18.0" AnchorPane.topAnchor="408.0" />
+      <PasswordField fx:id="txtMatKhau" layoutX="58.0" layoutY="234.0" onAction="#DangNhap" prefHeight="35.0" prefWidth="224.0" promptText="Mật Khẩu" />
+      <Button fx:id="btnDangNhap" defaultButton="true" layoutX="92.0" layoutY="296.0" mnemonicParsing="false" onAction="#DangNhap" prefHeight="56.0" prefWidth="156.0" text="Đăng Nhập">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

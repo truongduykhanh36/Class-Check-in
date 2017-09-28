@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="541.0" prefWidth="357.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.SinhVien_ManHinhChinhController">
+   <children>
+      <ListView fx:id="lstDanhSachKhoaHoc" layoutY="38.0" onContextMenuRequested="#KiemTraCoTheDiemDanh" onMouseClicked="#hienThiThongTinChiTiet" prefHeight="464.0" prefWidth="357.0" AnchorPane.bottomAnchor="39.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="38.0">
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem fx:id="mnDiemDanh" mnemonicParsing="false" onAction="#DiemDanh" text="Điểm danh" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </ListView>
+      <Label fx:id="lblStatus" layoutX="14.0" layoutY="413.0" text="Tình trạng Điểm danh" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" />
+      <SplitMenuButton layoutX="256.0" layoutY="6.0" mnemonicParsing="false" onAction="#DangXuat" prefHeight="28.0" prefWidth="96.0" text="Đăng xuất">
+        <items>
+          <MenuItem mnemonicParsing="false" onAction="#ThayDoiMatKhau" text="Đổi Mật khẩu" />
+        </items>
+      </SplitMenuButton>
+   </children>
+</AnchorPane>

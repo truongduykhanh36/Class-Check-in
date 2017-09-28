@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane minHeight="300.0" minWidth="600.0" prefHeight="541.0" prefWidth="1046.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.GiaoVu_ManHinhChinh_Controller">
+   <children>
+      <SplitPane dividerPositions="0.2982" focusTraversable="false" layoutX="17.0" layoutY="65.0" maxWidth="228.0" minWidth="228.0" prefHeight="160.0" prefWidth="228.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane maxWidth="220.0" minHeight="0.0" minWidth="220.0" prefHeight="478.0" prefWidth="220.0">
+               <children>
+                  <ListView fx:id="lstDSKhoaHoc" layoutX="-19.0" layoutY="36.0" onMouseClicked="#yeuCauFillDuLieuDiemDanhLenView" prefHeight="418.0" prefWidth="220.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+                     <contextMenu>
+                        <ContextMenu>
+                          <items>
+                            <MenuItem fx:id="mnSuaThongTinKhoaHoc" mnemonicParsing="false" onAction="#SuaThongTinKhoaHoc" text="Sửa Thông tin Khóa học" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </ListView>
+                  <Button alignment="CENTER" contentDisplay="CENTER" defaultButton="true" graphicTextGap="0.0" layoutX="198.0" layoutY="443.0" mnemonicParsing="false" onAction="#ThemKhoaHoc" prefHeight="31.0" prefWidth="52.0" text="Thêm" AnchorPane.bottomAnchor="6.0" AnchorPane.rightAnchor="6.0">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="6.0" layoutY="14.0" text="Danh sách Khóa học" AnchorPane.leftAnchor="6.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="498.0" prefWidth="800.0">
+               <children>
+                  <SplitMenuButton layoutX="413.0" layoutY="4.0" mnemonicParsing="false" onAction="#DangXuat" prefHeight="28.0" prefWidth="96.0" text="Đăng xuất" AnchorPane.rightAnchor="3.0" AnchorPane.topAnchor="4.0">
+                     <items>
+                        <MenuItem mnemonicParsing="false" onAction="#ThayDoiMatKhau" text="Đổi Mật khẩu" />
+                     </items>
+                  </SplitMenuButton>
+                  <TableView fx:id="tblDiemDanh" layoutX="88.0" layoutY="84.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="44.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="36.0">
+                    <columns>
+                      <TableColumn fx:id="clmMSSV" prefWidth="75.0" resizable="false" text="MSSV" />
+                      <TableColumn fx:id="clmHoTen" prefWidth="170.0" resizable="false" text="Họ tên" />
+                        <TableColumn fx:id="clm1" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="1" />
+                        <TableColumn fx:id="clm2" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="2" />
+                        <TableColumn fx:id="clm3" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="3" />
+                        <TableColumn fx:id="clm4" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="4" />
+                        <TableColumn fx:id="clm5" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="5" />
+                        <TableColumn fx:id="clm6" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="6" />
+                        <TableColumn fx:id="clm7" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="7" />
+                        <TableColumn fx:id="clm8" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="8" />
+                        <TableColumn fx:id="clm9" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="9" />
+                        <TableColumn fx:id="clm10" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="10" />
+                        <TableColumn fx:id="clm11" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="11" />
+                        <TableColumn fx:id="clm12" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="12" />
+                        <TableColumn fx:id="clm13" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="13" />
+                        <TableColumn fx:id="clm14" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="14" />
+                        <TableColumn fx:id="clm15" editable="false" prefWidth="37.0" resizable="false" sortable="false" text="15" />
+                    </columns>
+                     <contextMenu>
+                        <ContextMenu fx:id="cmnMenu">
+                          <items>
+                            <MenuItem fx:id="mnCoMat" mnemonicParsing="false" onAction="#DiemDanhCoMat" text="Có mặt" />
+                              <MenuItem fx:id="mnVang" mnemonicParsing="false" onAction="#DiemDanhVang" text="Vắng" />
+                          </items>
+                        </ContextMenu>
+                     </contextMenu>
+                  </TableView>
+                  <HBox alignment="CENTER_LEFT" layoutX="7.0" layoutY="454.0" prefHeight="38.0" prefWidth="499.0" spacing="3.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                     <children>
+                        <TextField fx:id="txtMSSV" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ThemSinhVienNhapTay" prefHeight="30.0" prefWidth="91.0" promptText="MSSV">
+                           <padding>
+                              <Insets left="6.0" right="6.0" />
+                           </padding>
+                           <HBox.margin>
+                              <Insets bottom="2.0" left="6.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <TextField fx:id="txtHoTen" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onAction="#ThemSinhVienNhapTay" prefHeight="30.0" prefWidth="189.0" promptText="Họ tên">
+                           <HBox.margin>
+                              <Insets bottom="2.0" />
+                           </HBox.margin>
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <Region prefHeight="38.0" prefWidth="70.0" HBox.hgrow="ALWAYS">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <HBox.margin>
+                              <Insets bottom="2.0" />
+                           </HBox.margin>
+                        </Region>
+                        <SplitMenuButton maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#ThemSinhVienNhapTay" prefHeight="31.0" prefWidth="121.0" text="Thêm Sinh viên">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#ThemSinhVienTuCSV" text="Nhập DS SV từ CSV" />
+                          </items>
+                           <HBox.margin>
+                              <Insets bottom="2.0" right="6.0" />
+                           </HBox.margin>
+                        </SplitMenuButton>
+                     </children>
+                  </HBox>
+                  <Label fx:id="lblStatus" layoutX="8.0" layoutY="14.0" text="Status" textFill="#02860b" AnchorPane.leftAnchor="8.0" AnchorPane.topAnchor="14.0" />
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+</AnchorPane>

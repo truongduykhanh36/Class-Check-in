@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="hibernate.cfg.xml/Hibernate">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.1">
+    <root id="1"/>
+    <schema id="2" parent="1" name="quanlymonhoc">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="information_schema"/>
+    <schema id="4" parent="1" name="mysql"/>
+    <schema id="5" parent="1" name="performance_schema"/>
+    <schema id="6" parent="1" name="sakila"/>
+    <schema id="7" parent="1" name="sys"/>
+    <schema id="8" parent="1" name="world"/>
+    <table id="9" parent="2" name="diem_danh"/>
+    <table id="10" parent="2" name="giao_vu"/>
+    <table id="11" parent="2" name="mon_hoc"/>
+    <table id="12" parent="2" name="sinh_vien"/>
+    <column id="13" parent="9" name="mssv">
+      <Position>1</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="14" parent="9" name="ma_mon">
+      <Position>2</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="15" parent="9" name="diem_danh">
+      <Position>3</Position>
+      <DataType>binary(15)|0</DataType>
+    </column>
+    <index id="16" parent="9" name="ma_mon_fk">
+      <ColNames>ma_mon</ColNames>
+    </index>
+    <key id="17" parent="9" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mssv
+ma_mon</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="18" parent="9" name="mssv_fk">
+      <ColNames>mssv</ColNames>
+      <RefSchemaName>quanlymonhoc</RefSchemaName>
+      <RefTableName>sinh_vien</RefTableName>
+      <RefColNames>mssv</RefColNames>
+    </foreign-key>
+    <foreign-key id="19" parent="9" name="ma_mon_fk">
+      <ColNames>ma_mon</ColNames>
+      <RefSchemaName>quanlymonhoc</RefSchemaName>
+      <RefTableName>mon_hoc</RefTableName>
+      <RefColNames>ma_mon</RefColNames>
+    </foreign-key>
+    <column id="20" parent="10" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+    </column>
+    <column id="21" parent="10" name="tai_khoan">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="22" parent="10" name="mat_khau">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="23" parent="10" name="ten">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="24" parent="10" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="25" parent="11" name="ma_mon">
+      <Position>1</Position>
+      <DataType>varchar(10)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="26" parent="11" name="ten_mon">
+      <Position>2</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <column id="27" parent="11" name="ngay_bat_dau">
+      <Position>3</Position>
+      <DataType>date|0</DataType>
+    </column>
+    <column id="28" parent="11" name="gio_bat_dau">
+      <Position>4</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <column id="29" parent="11" name="gio_ket_thuc">
+      <Position>5</Position>
+      <DataType>time|0</DataType>
+    </column>
+    <column id="30" parent="11" name="phong_hoc">
+      <Position>6</Position>
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <key id="31" parent="11" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>ma_mon</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="32" parent="12" name="mssv">
+      <Position>1</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="33" parent="12" name="tai_khoan">
+      <Position>2</Position>
+      <DataType>varchar(7)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="34" parent="12" name="mat_khau">
+      <Position>3</Position>
+      <DataType>varchar(60)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="35" parent="12" name="ten">
+      <Position>4</Position>
+      <DataType>varchar(30)|0</DataType>
+    </column>
+    <key id="36" parent="12" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>mssv</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>

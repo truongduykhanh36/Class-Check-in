@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="389.0" prefWidth="258.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.ThemKhoaHocMoiController">
+   <children>
+      <TextField fx:id="txtMaKhoaHoc" layoutX="36.0" layoutY="35.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="187.0" promptText="Mã Khóa học" />
+      <TextField fx:id="txtTenKhoaHoc" layoutX="36.0" layoutY="68.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="187.0" promptText="Tên Khóa học" />
+      <DatePicker fx:id="dtNgayBatDau" layoutX="36.0" layoutY="102.0" prefHeight="25.0" prefWidth="187.0" promptText="Ngày Bắt đầu" />
+      <TextField fx:id="txtGioBatDau" layoutX="36.0" layoutY="156.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="87.0" promptText="HH (0 - 23)" />
+      <TextField fx:id="txtPhutBatDau" layoutX="136.0" layoutY="156.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="87.0" promptText="mm (0 - 59)" />
+      <Label layoutX="128.0" layoutY="152.0" text=":">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="128.0" layoutY="206.0" text=":">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtGioKetThuc" layoutX="36.0" layoutY="210.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="87.0" promptText="HH (0 - 23)" />
+      <TextField fx:id="txtPhutKetThuc" layoutX="136.0" layoutY="210.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="87.0" promptText="mm (0 - 59)" />
+      <Label layoutX="36.0" layoutY="136.0" text="Giờ Bắt đầu" />
+      <Label layoutX="36.0" layoutY="190.0" text="Giờ Kết thúc" />
+      <TextField fx:id="txtPhongHoc" layoutX="36.0" layoutY="245.0" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="25.0" prefWidth="187.0" promptText="Phòng học" />
+      <Button fx:id="btnOK" defaultButton="true" layoutX="142.0" layoutY="311.0" mnemonicParsing="false" onAction="#ThemHoacCapNhatKhoaHoc" prefHeight="54.0" prefWidth="81.0" text="OK" wrapText="true" />
+      <Button fx:id="btnCancel" cancelButton="true" layoutX="36.0" layoutY="321.0" mnemonicParsing="false" onAction="#HuyTacVu" prefHeight="33.0" prefWidth="87.0" text="cancel" wrapText="true" />
+      <Label fx:id="lblStatus" layoutX="36.0" layoutY="278.0" textFill="#eb0303" />
+   </children>
+</AnchorPane>

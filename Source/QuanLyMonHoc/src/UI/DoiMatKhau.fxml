@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="315.0" prefWidth="274.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="UI.DoiMatKhauController">
+   <children>
+      <PasswordField fx:id="txtMatKhauCu" layoutX="39.0" layoutY="35.0" prefHeight="37.0" prefWidth="196.0" promptText="Mật khẫu cũ" />
+      <PasswordField fx:id="txtMatKhauMoi" layoutX="39.0" layoutY="83.0" prefHeight="37.0" prefWidth="196.0" promptText="Mật khẫu mới" />
+      <PasswordField fx:id="txtNhapLaiMatKhauMoi" layoutX="39.0" layoutY="133.0" onAction="#DoiMatKhau" prefHeight="37.0" prefWidth="196.0" promptText="Nhập lại Mật khẫu mới" />
+      <Button defaultButton="true" layoutX="148.0" layoutY="215.0" mnemonicParsing="false" onAction="#DoiMatKhau" prefHeight="62.0" prefWidth="87.0" text="OK" />
+      <Button cancelButton="true" layoutX="39.0" layoutY="228.0" mnemonicParsing="false" onAction="#HuyTacVu" prefHeight="37.0" prefWidth="87.0" text="Cancel" />
+      <Label fx:id="lblStatus" layoutX="39.0" layoutY="178.0" textFill="RED" />
+   </children>
+</AnchorPane>
